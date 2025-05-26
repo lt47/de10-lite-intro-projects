@@ -1,0 +1,86 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY C4M1P5 IS PORT (
+    SW : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    HEX0, HEX1, HEX5, HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+    LEDR : OUT STD_LOGIC
+);
+END ENTITY C4M1P5;
+
+ARCHITECTURE behavioral OF C4M1P5 IS
+    SIGNAL cin : STD_LOGIC;
+
+    --SIGNAL bcd : STD_LOGIC_VECTOR(4 DOWNTO 0);
+    SIGNAL Z0 : UNSIGNED(4 DOWNTO 0);
+    SIGNAL S0 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL S1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL T0 : UNSIGNED(4 DOWNTO 0);
+    SIGNAL C : STD_LOGIC;
+    SIGNAL Result : UNSIGNED(4 DOWNTO 0);
+    SIGNAL BCD0 : STD_LOGIC_VECTOR (3 DOWNTO 0);
+    SIGNAL BCD1 : STD_LOGIC;
+
+BEGIN
+
+    cin <= SW(8);
+    S0 <= SW(3 DOWNTO 0);
+    S1 <= SW(7 DOWNTO 4);
+    T0 <= (('0' & unsigned(S0)) + ('0' & unsigned(S1)) + ("0000" & (cin)));
+
+    --bcd <= cout & s3 & s2 & s1 & s0;
+    
+    Z0 <= "01010" WHEN T0 > 9 ELSE "00000";
+    C <= '1' WHEN T0 > 9 ELSE '0';
+
+    Result <= T0 - Z0;
+
+    BCD0 <= STD_LOGIC_VECTOR(Result(3 DOWNTO 0));
+
+    BCD1 <= C;
+
+    HEX0 <= "1000000" WHEN BCD0 = "00000" ELSE
+        "1111001" WHEN BCD0 = "00001" ELSE
+        "0100100" WHEN BCD0 = "00010" ELSE
+        "0110000" WHEN BCD0 = "00011" ELSE
+        "0011001" WHEN BCD0 = "00100" ELSE
+        "0010010" WHEN BCD0 = "00101" ELSE
+        "0000010" WHEN BCD0 = "00110" ELSE
+        "1111000" WHEN BCD0 = "00111" ELSE
+        "0000000" WHEN BCD0 = "01000" ELSE
+        "0011000" WHEN BCD0 = "01001" ELSE
+        "1111111";
+
+    HEX1 <= "1000000" WHEN BCD1 = '0' ELSE
+        "1111001" WHEN BCD1 = '1' ELSE
+        "1111111";
+
+    HEX5 <= "1000000" WHEN S0 = "0000" ELSE
+        "1111001" WHEN S0 = "0001" ELSE
+        "0100100" WHEN S0 = "0010" ELSE
+        "0110000" WHEN S0 = "0011" ELSE
+        "0011001" WHEN S0 = "0100" ELSE
+        "0010010" WHEN S0 = "0101" ELSE
+        "0000010" WHEN S0 = "0110" ELSE
+        "1111000" WHEN S0 = "0111" ELSE
+        "0000000" WHEN S0 = "1000" ELSE
+        "0011000" WHEN S0 = "1001" ELSE
+        "1111111";
+
+    HEX3 <= "1000000" WHEN S1 = "0000" ELSE
+        "1111001" WHEN S1 = "0001" ELSE
+        "0100100" WHEN S1 = "0010" ELSE
+        "0110000" WHEN S1 = "0011" ELSE
+        "0011001" WHEN S1 = "0100" ELSE
+        "0010010" WHEN S1 = "0101" ELSE
+        "0000010" WHEN S1 = "0110" ELSE
+        "1111000" WHEN S1 = "0111" ELSE
+        "0000000" WHEN S1 = "1000" ELSE
+        "0011000" WHEN S1 = "1001" ELSE
+        "1111111";
+
+    LEDR <= '1' WHEN (S0 > "1001") OR (S1 > "1001") ELSE
+        '0';
+
+END behavioral;
