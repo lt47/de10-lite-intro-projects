@@ -1,0 +1,240 @@
+# Reading C:/intelFPGA_lite/16.1/modelsim_ase/tcl/vsim/pref.tcl
+# do pwm_led_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/AlteraPrj/DE10litePWM/source {C:/AlteraPrj/DE10litePWM/source/pwm_led_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:12:01 on May 27,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/AlteraPrj/DE10litePWM/source" C:/AlteraPrj/DE10litePWM/source/pwm_led_top.v 
+# -- Compiling module pwm_led_top
+# 
+# Top level modules:
+# 	pwm_led_top
+# End time: 06:12:01 on May 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/AlteraPrj/DE10litePWM/source {C:/AlteraPrj/DE10litePWM/source/pwm_gen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:12:01 on May 27,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/AlteraPrj/DE10litePWM/source" C:/AlteraPrj/DE10litePWM/source/pwm_gen.v 
+# -- Compiling module pwm_gen
+# 
+# Top level modules:
+# 	pwm_gen
+# End time: 06:12:02 on May 27,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/AlteraPrj/DE10litePWM/source {C:/AlteraPrj/DE10litePWM/source/debouncer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:12:02 on May 27,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/AlteraPrj/DE10litePWM/source" C:/AlteraPrj/DE10litePWM/source/debouncer.v 
+# -- Compiling module debouncer
+# 
+# Top level modules:
+# 	debouncer
+# End time: 06:12:02 on May 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/AlteraPrj/DE10litePWM {C:/AlteraPrj/DE10litePWM/pwm_pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:12:02 on May 27,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/AlteraPrj/DE10litePWM" C:/AlteraPrj/DE10litePWM/pwm_pll.v 
+# -- Compiling module pwm_pll
+# 
+# Top level modules:
+# 	pwm_pll
+# End time: 06:12:02 on May 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/AlteraPrj/DE10litePWM/db {C:/AlteraPrj/DE10litePWM/db/pwm_pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:12:02 on May 27,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/AlteraPrj/DE10litePWM/db" C:/AlteraPrj/DE10litePWM/db/pwm_pll_altpll.v 
+# -- Compiling module pwm_pll_altpll
+# 
+# Top level modules:
+# 	pwm_pll_altpll
+# End time: 06:12:02 on May 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -gui -l msim_transcript work.pwm_led_top -t ns
+# vsim -gui -l msim_transcript work.pwm_led_top -t ns 
+# Start time: 06:12:37 on May 27,2025
+# Loading work.pwm_led_top
+# Loading work.pwm_pll
+# ** Error: (vsim-3033) C:/AlteraPrj/DE10litePWM/pwm_pll.v(58): Instantiation of 'altpll' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+#         Searched libraries:
+#             C:/AlteraPrj/DE10litePWM/simulation/modelsim/rtl_work
+# Loading work.debouncer
+# Loading work.pwm_gen
+# Error loading design
+# End time: 06:12:38 on May 27,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vsim -gui -l msim_transcript -t ns work.pwm_led_top -L C:/intelFPGA_lite/16.1/modelsim_ase/altera/vhdl/altera_mf
+# vsim -gui -l msim_transcript -t ns work.pwm_led_top -L C:/intelFPGA_lite/16.1/modelsim_ase/altera/vhdl/altera_mf 
+# Start time: 06:23:29 on May 27,2025
+# Loading work.pwm_led_top
+# Loading work.pwm_pll
+# Loading work.debouncer
+# Loading work.pwm_gen
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(97): Unresolved defparam reference to 'altpll_component' in altpll_component.bandwidth_type.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(98): Unresolved defparam reference to 'altpll_component' in altpll_component.clk0_divide_by.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(99): Unresolved defparam reference to 'altpll_component' in altpll_component.clk0_duty_cycle.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(100): Unresolved defparam reference to 'altpll_component' in altpll_component.clk0_multiply_by.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(101): Unresolved defparam reference to 'altpll_component' in altpll_component.clk0_phase_shift.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(102): Unresolved defparam reference to 'altpll_component' in altpll_component.clk1_divide_by.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(103): Unresolved defparam reference to 'altpll_component' in altpll_component.clk1_duty_cycle.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(104): Unresolved defparam reference to 'altpll_component' in altpll_component.clk1_multiply_by.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(105): Unresolved defparam reference to 'altpll_component' in altpll_component.clk1_phase_shift.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(106): Unresolved defparam reference to 'altpll_component' in altpll_component.compensate_clock.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(107): Unresolved defparam reference to 'altpll_component' in altpll_component.inclk0_input_frequency.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(108): Unresolved defparam reference to 'altpll_component' in altpll_component.intended_device_family.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(109): Unresolved defparam reference to 'altpll_component' in altpll_component.lpm_hint.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(110): Unresolved defparam reference to 'altpll_component' in altpll_component.lpm_type.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(111): Unresolved defparam reference to 'altpll_component' in altpll_component.operation_mode.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(112): Unresolved defparam reference to 'altpll_component' in altpll_component.pll_type.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(113): Unresolved defparam reference to 'altpll_component' in altpll_component.port_activeclock.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(114): Unresolved defparam reference to 'altpll_component' in altpll_component.port_areset.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(115): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkbad0.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(116): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkbad1.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(117): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkloss.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(118): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkswitch.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(119): Unresolved defparam reference to 'altpll_component' in altpll_component.port_configupdate.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(120): Unresolved defparam reference to 'altpll_component' in altpll_component.port_fbin.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(121): Unresolved defparam reference to 'altpll_component' in altpll_component.port_inclk0.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(122): Unresolved defparam reference to 'altpll_component' in altpll_component.port_inclk1.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(123): Unresolved defparam reference to 'altpll_component' in altpll_component.port_locked.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(124): Unresolved defparam reference to 'altpll_component' in altpll_component.port_pfdena.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(125): Unresolved defparam reference to 'altpll_component' in altpll_component.port_phasecounterselect.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(126): Unresolved defparam reference to 'altpll_component' in altpll_component.port_phasedone.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(127): Unresolved defparam reference to 'altpll_component' in altpll_component.port_phasestep.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(128): Unresolved defparam reference to 'altpll_component' in altpll_component.port_phaseupdown.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(129): Unresolved defparam reference to 'altpll_component' in altpll_component.port_pllena.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(130): Unresolved defparam reference to 'altpll_component' in altpll_component.port_scanaclr.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(131): Unresolved defparam reference to 'altpll_component' in altpll_component.port_scanclk.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(132): Unresolved defparam reference to 'altpll_component' in altpll_component.port_scanclkena.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(133): Unresolved defparam reference to 'altpll_component' in altpll_component.port_scandata.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(134): Unresolved defparam reference to 'altpll_component' in altpll_component.port_scandataout.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(135): Unresolved defparam reference to 'altpll_component' in altpll_component.port_scandone.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(136): Unresolved defparam reference to 'altpll_component' in altpll_component.port_scanread.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(137): Unresolved defparam reference to 'altpll_component' in altpll_component.port_scanwrite.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(138): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clk0.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(139): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clk1.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(140): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clk2.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(141): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clk3.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(142): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clk4.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(143): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clk5.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(144): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkena0.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(145): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkena1.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(146): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkena2.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(147): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkena3.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(148): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkena4.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(149): Unresolved defparam reference to 'altpll_component' in altpll_component.port_clkena5.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(150): Unresolved defparam reference to 'altpll_component' in altpll_component.port_extclk0.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(151): Unresolved defparam reference to 'altpll_component' in altpll_component.port_extclk1.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(152): Unresolved defparam reference to 'altpll_component' in altpll_component.port_extclk2.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(153): Unresolved defparam reference to 'altpll_component' in altpll_component.port_extclk3.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# ** Error (suppressible): (vsim-10000) C:/AlteraPrj/DE10litePWM/pwm_pll.v(154): Unresolved defparam reference to 'altpll_component' in altpll_component.width_clock.
+#    Time: 0 ns  Iteration: 0  Instance: /pwm_led_top/b2v_inst File: C:/AlteraPrj/DE10litePWM/pwm_pll.v
+# Error loading design
+# End time: 06:23:29 on May 27,2025, Elapsed time: 0:00:00
+# Errors: 58, Warnings: 0
+vsim -gui -l msim_transcript -t ns -L C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf work.pwm_led_top
+# vsim -gui -l msim_transcript -t ns -L C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf work.pwm_led_top 
+# Start time: 06:24:31 on May 27,2025
+# Loading work.pwm_led_top
+# Loading work.pwm_pll
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf.altpll
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf.ALTERA_DEVICE_FAMILIES
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf.pll_iobuf
+# Loading work.debouncer
+# Loading work.pwm_gen
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf.MF_cycloneiii_pll
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf.cda_m_cntr
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf.cda_n_cntr
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/altera/verilog/altera_mf.cda_scale_cntr
+add wave -position end  sim:/pwm_led_top/MAX10_CLK1_50
+add wave -position end  sim:/pwm_led_top/SW
+add wave -position end  sim:/pwm_led_top/ARDUINO_IO
+add wave -position end  sim:/pwm_led_top/LEDR
+add wave -position end  sim:/pwm_led_top/duty_cycle
+add wave -position end  sim:/pwm_led_top/duty_cycle_clk
+add wave -position end  sim:/pwm_led_top/pwm
+add wave -position end  sim:/pwm_led_top/pwm_clk
+add wave -position end  sim:/pwm_led_top/SYNTHESIZED_WIRE_0
+force -freeze sim:/pwm_led_top/MAX10_CLK1_50 1 0, 0 {10 ns} -r 20
+force -freeze sim:/pwm_led_top/duty_cycle_clk 1 0, 0 {1500 ns} -r 3000
+run
+# ** Error (suppressible): (vsim-8630) /build/swbuild/SJ/nightly/16.1/196/l64/work/modelsim/eda/sim_lib/altera_mf.v(15793): Infinity results from division operation.
+# ** Error (suppressible): (vsim-8630) /build/swbuild/SJ/nightly/16.1/196/l64/work/modelsim/eda/sim_lib/altera_mf.v(15793): Infinity results from division operation.
+# ** Error (suppressible): (vsim-8630) /build/swbuild/SJ/nightly/16.1/196/l64/work/modelsim/eda/sim_lib/altera_mf.v(15793): Infinity results from division operation.
+force -freeze sim:/pwm_led_top/SW 000 0
+run
+run
+#  Note : MAX 10 PLL locked to incoming clock
+# Time: 300  Instance: pwm_led_top.b2v_inst.altpll_component.cycloneiii_pll.pll3
+quit
+# End time: 06:39:37 on May 27,2025, Elapsed time: 0:15:06
+# Errors: 3, Warnings: 0

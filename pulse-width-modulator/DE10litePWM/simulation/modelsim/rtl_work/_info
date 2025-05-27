@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/AlteraPrj/DE10litePWM/simulation/modelsim
+vdebouncer
+Z1 !s110 1748344322
+!i10b 1
+!s100 WmWdAMUSE`>:OAid?:=GK3
+I7B9XkPKD517RJ]0m<6cF>3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1748263822
+8C:/AlteraPrj/DE10litePWM/source/debouncer.v
+FC:/AlteraPrj/DE10litePWM/source/debouncer.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1748344322.000000
+!s107 C:/AlteraPrj/DE10litePWM/source/debouncer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/AlteraPrj/DE10litePWM/source|C:/AlteraPrj/DE10litePWM/source/debouncer.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/AlteraPrj/DE10litePWM/source
+Z8 tCvgOpt 0
+vpwm_gen
+R1
+!i10b 1
+!s100 :EWHK?OS1fg=gGzU`dC5U0
+IGhH<zSa9Zc1_`eTOd2CIQ1
+R2
+R0
+R3
+8C:/AlteraPrj/DE10litePWM/source/pwm_gen.v
+FC:/AlteraPrj/DE10litePWM/source/pwm_gen.v
+L0 4
+R4
+r1
+!s85 0
+31
+Z9 !s108 1748344321.000000
+!s107 C:/AlteraPrj/DE10litePWM/source/pwm_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/AlteraPrj/DE10litePWM/source|C:/AlteraPrj/DE10litePWM/source/pwm_gen.v|
+!i113 1
+R6
+R7
+R8
+vpwm_led_top
+!s110 1748344321
+!i10b 1
+!s100 ezL[D<^^IbdYO1^j?2M4:2
+I]V;I4W[XaA`Y^lf0eOYVm2
+R2
+R0
+w1748284326
+8C:/AlteraPrj/DE10litePWM/source/pwm_led_top.v
+FC:/AlteraPrj/DE10litePWM/source/pwm_led_top.v
+L0 20
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/AlteraPrj/DE10litePWM/source/pwm_led_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/AlteraPrj/DE10litePWM/source|C:/AlteraPrj/DE10litePWM/source/pwm_led_top.v|
+!i113 1
+R6
+R7
+R8
+vpwm_pll
+R1
+!i10b 1
+!s100 ]5Zi]J9doR0B@LEAgJ3S=2
+Id^>8Y<`Q;YfJaLG48Qz5>3
+R2
+R0
+w1748278382
+8C:/AlteraPrj/DE10litePWM/pwm_pll.v
+FC:/AlteraPrj/DE10litePWM/pwm_pll.v
+L0 40
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/AlteraPrj/DE10litePWM/pwm_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/AlteraPrj/DE10litePWM|C:/AlteraPrj/DE10litePWM/pwm_pll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/AlteraPrj/DE10litePWM
+R8
+vpwm_pll_altpll
+R1
+!i10b 1
+!s100 5<:0]j9^2XVFaF3<zKVXN0
+I1]4A]^XEz59O9IcLLPI<?2
+R2
+R0
+w1748283761
+8C:/AlteraPrj/DE10litePWM/db/pwm_pll_altpll.v
+FC:/AlteraPrj/DE10litePWM/db/pwm_pll_altpll.v
+L0 30
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/AlteraPrj/DE10litePWM/db/pwm_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/AlteraPrj/DE10litePWM/db|C:/AlteraPrj/DE10litePWM/db/pwm_pll_altpll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/AlteraPrj/DE10litePWM/db
+R8
